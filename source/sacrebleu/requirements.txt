@@ -1,0 +1,2 @@
+git+https://github.com/huggingface/evaluate@0ebbce34976e809e8a6f362f4f941e0d31efc4a0
+sacrebleu

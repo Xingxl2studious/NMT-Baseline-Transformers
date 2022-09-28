@@ -1,0 +1,13 @@
+CUDA_VISIBLE_DEVICES=0 python3 train.py \
+    --source_lang th \
+    --target_lang en \
+    --lang_pair en-th \
+    --saved_dir 'checkpoint' \
+    --pretrained_model 'facebook/mbart-large-50'\
+    --lr 1e-4 \
+    --batch_size 32 \
+    --max_sentence_length 128\
+    --freeze_decoder 0
+
+# 
+# bsub -n 4 -q HPC.S1.GPU.X795.suda -o train.log  -gpu num=1:mode=exclusive_process bash run.sh
