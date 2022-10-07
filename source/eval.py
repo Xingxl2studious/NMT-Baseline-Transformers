@@ -46,11 +46,11 @@ def evaluate_parallel(checkpoint_path, pretrained_model, tokenized_dataset_dict,
     print(results)
     
     # save
-    with open(f'{PATH}-references-'+test_or_dev, 'w') as f:
+    with open(f'{PATH}-references-'+test_or_valid, 'w') as f:
         for lines in references:
             for line in lines:
                 f.write(line + '\n')
-    with open(f'{PATH}-predictions-'+test_or_dev, 'w') as f:
+    with open(f'{PATH}-predictions-'+test_or_valid, 'w') as f:
         for line in predictions:
             f.write(line + '\n')   
         
